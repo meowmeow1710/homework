@@ -1,0 +1,114 @@
+<html>  
+<head>
+  <meta charset="utf-8">
+  <script>
+    function bai1(){
+      var now = new Date();  
+      var date = now.getDate();   
+      var month = now.getMonth() + 1;  
+      var year = now.getFullYear();  
+      var season;
+      if (1<=month && month<=3 ){
+        season = 'Xuân';
+      } else if (4<=month && month<=6){
+        season = 'Hạ'
+      }  else if (7<=month && month<=9){
+        season = 'Thu'
+      } else if (10<=month && month<=12){
+        season = 'Đông'
+      }
+      document.write('Hôm nay là ngày ' +date+ ' tháng ' +month+ ' năm ' +year+ ', mùa ' +season);
+    }
+   
+    function bai2(a){
+      var a = prompt('Nhập tham số a:');
+      if (typeof a != "string"){
+        a = a.toString();
+      } else if (typeof a == 'string'){
+        if (a.length <= 10){
+          document.write(a +"<p></p>");
+        } else {
+          for (var i=0; i<=9; i++){
+            document.write(a[i]+"<p></p>");
+          }
+        }
+      } 
+    }
+
+    function bai3(x){
+      var x;
+      x=x.toString()
+      if (0<=x && x <=3.9){
+        x='F';
+      } else if (4<=x && x<=5.4){
+        x='D'
+      } else if (5.5<=x && x<=6.9){
+        x='C'
+      } else if (7<=x && x<=8.4){
+        x='B'
+      } else if (8.5<=x && x<=10){   
+        x='A'
+      }
+      document.write('Điểm của học viên đó là: '+x)
+      document.write("<p></p>")
+    }
+
+    function translate(x){
+      var x="A";
+      var kq;
+      switch (x){
+        case "A":
+          l = 'Việt'
+          kq = '"Xin chào"';
+          break;
+        case "B":
+          l = 'Pháp'
+          kq = '"Bonjour"';
+          break;
+        case "C":
+          l = 'Ý'
+          kq= '"Ciao"';
+          break;
+        case "D":
+          l = 'Đức';
+          kq= '"Hallo"';
+          break;
+        case "E":
+          l = '';
+          kq= '"Helló"';
+          break;
+      }
+      document.write('Từ "Hello" trong tiếng '+l+' là ' +kq);
+    }
+
+    function bai5(){
+      var a = new Array (false, false, false, true, false, true, false, true);
+      var kq = 0;
+        for (var i=0; i<=a.length; i++){
+          kq=kq+1;
+          if (a[i] ==true){
+            break;
+          }
+        }
+      document.write('Giá trị "true" xuất hiện lần đầu trong mảng ở vị trí thứ: ', kq);
+
+    }
+    function bai6(){
+      var colors = ['#FF0000','#0000FF'];
+      var tmp=''; s1='';
+      for (var i=1; i<=100; i++){
+       if (i%2==0){
+        tmp='<font color="'+colors[1]+'">'+i+'</font>';
+        } else {
+          tmp='<font color="'+colors[0]+'">'+i+'</font>';
+        }      
+      s1+=tmp+"<p></p>";
+      
+      }
+      document.write(s1);
+    }
+     
+  </script>
+</head>  
+
+</html>
